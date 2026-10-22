@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mohira Salayeva — Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;800&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F3F1FF; --surface:#FFFFFF; --ink:#24235C; --muted:#5B5A8A;
+  --accent:#6C5CE7; --mint:#2FBF9B; --pink:#FF7AA8; --line:#D9D5F5;
+  --code-bg:#24235C; --code-ink:#EDEBFF;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#16153A; --surface:#201F52; --ink:#F0EEFF; --muted:#B4B1E3;
+    --accent:#9D90FF; --mint:#5FE3C0; --pink:#FF9BBD; --line:#37357A;
+    --code-bg:#0F0E2B; --code-ink:#EDEBFF;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#16153A; --surface:#201F52; --ink:#F0EEFF; --muted:#B4B1E3;
+  --accent:#9D90FF; --mint:#5FE3C0; --pink:#FF9BBD; --line:#37357A;
+  --code-bg:#0F0E2B; --code-ink:#EDEBFF;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 "Nunito",system-ui,sans-serif}
+h1,h2,h3{font-family:"Unbounded","Nunito",system-ui,sans-serif;line-height:1.15;margin:0}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--pink);outline-offset:3px}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+nav{display:flex;gap:18px;flex-wrap:wrap;padding:18px 0;font-weight:700}
+nav a{text-decoration:none;color:var(--ink)}
+nav a:hover{color:var(--accent)}
+.hero{display:grid;grid-template-columns:1fr;gap:28px;padding:24px 0 56px}
+@media(min-width:820px){.hero{grid-template-columns:1.1fr 1fr;align-items:center}}
+.hero h1{font-size:clamp(2rem,6vw,3.4rem);font-weight:800}
+.hero p{color:var(--muted);max-width:46ch;margin:16px 0 22px}
+.btn{display:inline-block;background:var(--accent);color:#fff;font-weight:700;text-decoration:none;padding:12px 22px;border-radius:999px}
+:root[data-theme="dark"] .btn{color:#16153A}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .btn{color:#16153A}}
+.editor{background:var(--code-bg);color:var(--code-ink);border-radius:14px;overflow:hidden;box-shadow:8px 8px 0 var(--accent)}
+.bar{display:flex;gap:7px;padding:12px 14px;background:rgba(255,255,255,.08)}
+.bar i{width:11px;height:11px;border-radius:50%;background:var(--pink)}
+.bar i:nth-child(2){background:#FFD166}.bar i:nth-child(3){background:var(--mint)}
+.editor pre{margin:0;padding:18px;overflow-x:auto;font:14px/1.7 ui-monospace,Menlo,Consolas,monospace}
+.k{color:#B7ABFF}.s{color:#7DF0CF}.c{color:#9A98CF}
+section{padding:44px 0;border-top:2px solid var(--line)}
+section h2{font-size:1.5rem;margin-bottom:20px}
+.about{max-width:62ch}
+.skills{display:flex;flex-wrap:wrap;gap:10px;padding:0;margin:0;list-style:none}
+.skills li{background:var(--surface);border:2px solid var(--line);border-radius:999px;padding:8px 18px;font-weight:700}
+.skills li.now{border-color:var(--mint)}
+.note{color:var(--muted);margin-top:14px;font-size:.95rem}
+.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.proj{background:var(--surface);border:2px solid var(--line);border-radius:16px;padding:20px}
+.proj:nth-child(1){border-top:6px solid var(--accent)}
+.proj:nth-child(2){border-top:6px solid var(--mint)}
+.proj:nth-child(3){border-top:6px solid var(--pink)}
+.proj h3{font-size:1.05rem;margin-bottom:8px}
+.proj p{margin:0;color:var(--muted);font-size:.97rem}
+.tag{display:inline-block;margin-top:12px;font-size:.85rem;font-weight:700;color:var(--mint)}
+.contact ul{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+footer{padding:28px 0 36px;color:var(--muted);font-size:.9rem}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav aria-label="Asosiy menyu">
+    <a href="#haqimda">Men haqimda</a>
+    <a href="#konikmalar">Koʻnikmalar</a>
+    <a href="#loyihalar">Loyihalar</a>
+    <a href="#aloqa">Aloqa</a>
+  </nav>
+
+  <header class="hero">
+    <div>
+      <h1>Salom, men Mohira Salayeva</h1>
+      <p>Men IT sohasini endi oʻrganayotgan oʻquvchiman. Har kuni yangi narsa oʻrganaman va oʻz loyihalarimni yarataman.</p>
+      <a class="btn" href="#loyihalar">Loyihalarimni koʻrish</a>
+    </div>
+    <div class="editor" aria-label="Kod koʻrinishidagi qisqa tanishuv">
+      <div class="bar"><i></i><i></i><i></i></div>
+<pre><span class="c">// mohira.js</span>
+<span class="k">const</span> mohira = {
+  ism: <span class="s">"Mohira Salayeva"</span>,
+  yoʻnalish: <span class="s">"IT"</span>,
+  daraja: <span class="s">"boshlangʻich"</span>,
+  oʻrganyapman: [<span class="s">"HTML"</span>, <span class="s">"CSS"</span>],
+  maqsad: <span class="s">"oʻz saytimni yaratish"</span>
+};</pre>
+    </div>
+  </header>
+
+  <section id="haqimda" class="about">
+    <h2>Men haqimda</h2>
+    <p>Men texnologiyalarga qiziqaman va kompyuter qanday ishlashini bilishni yaxshi koʻraman. Hozir dasturlashning asoslarini oʻrganyapman. Maqsadim — yaxshi dasturchi boʻlish va foydali ilovalar yaratish.</p>
+  </section>
+
+  <section id="konikmalar">
+    <h2>Koʻnikmalar</h2>
+    <ul class="skills">
+      <li class="now">HTML — oʻrganyapman</li>
+      <li class="now">CSS — oʻrganyapman</li>
+      <li>Kompyuter savodxonligi</li>
+      <li>Internetdan ma’lumot qidirish</li>
+      <li>Jamoada ishlash</li>
+    </ul>
+    <p class="note">Yangi narsa oʻrganganingda shu roʻyxatga qoʻsh.</p>
+  </section>
+
+  <section id="loyihalar">
+    <h2>Loyihalar</h2>
+    <div class="projects">
+      <article class="proj">
+        <h3>Birinchi veb-sahifam</h3>
+        <p>HTML va CSS yordamida oʻzim haqimda sodda sahifa.</p>
+        <span class="tag">Shu sahifa tayyor</span>
+      </article>
+      <article class="proj">
+        <h3>Sizning loyihangiz</h3>
+        <p>Bu yerga oʻz loyihangiz nomi va qisqa tavsifini yozing.</p>
+        <span class="tag">Tez orada</span>
+      </article>
+      <article class="proj">
+        <h3>Sizning loyihangiz</h3>
+        <p>Masalan: oddiy kalkulyator yoki oʻyin.</p>
+        <span class="tag">Tez orada</span>
+      </article>
+    </div>
+  </section>
+
+  <section id="aloqa" class="contact">
+    <h2>Aloqa</h2>
+    <ul>
+      <li>Telegram: @sizning_nomingiz</li>
+      <li>Elektron pochta: sizning@pochtangiz.uz</li>
+    </ul>
+  </section>
+
+  <footer>© 2026 Mohira Salayeva</footer>
+</div>
+</body>
+</html>
